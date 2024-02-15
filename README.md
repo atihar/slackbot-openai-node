@@ -1,2 +1,3 @@
-# slackbot-openai-node
+# slackbot-openai-node.js
+
  

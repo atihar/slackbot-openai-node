@@ -1,0 +1,19 @@
+{
+  "name": "slackbot-openai-node",
+  "version": "1.0.0",
+  "description": "bot for slack automation using openai",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "atihar hossen mahir",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.4",
+    "ngrok": "^5.0.0-beta.2",
+    "openai": "^4.28.0",
+    "uuid": "^9.0.1"
+  }
+}
