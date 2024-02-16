@@ -1,7 +1,7 @@
 require('dotenv').config()
 const { App } = require("@slack/bolt");
 const { OpenAI } = require('openai');
-const ngrok = require('ngrok');
+// const ngrok = require('ngrok');
 
 // gets API Key from environment variable OPENAI_API_KEY
 const openai = new OpenAI();
@@ -109,12 +109,12 @@ async function main() {
     console.log("⚡️ Bolt app is running!");
 }
 
-(async function () {
-    const url = await ngrok.connect({
-        addr: process.env.PORT || 3000,
-        authtoken: "1uIxTkc8CfxQmsLG2gkLWhGfez6_5bSkCifGVuV25dxQEZMtz"
-    });
-    console.log(url)
-})();
+// (async function () {
+//     const url = await ngrok.connect({
+//         addr: process.env.PORT || 3000,
+//         authtoken: "1uIxTkc8CfxQmsLG2gkLWhGfez6_5bSkCifGVuV25dxQEZMtz"
+//     });
+//     console.log(url)
+// })();
 
 main();
