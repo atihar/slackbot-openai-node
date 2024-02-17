@@ -1,7 +1,7 @@
 require('dotenv').config()
 const { App } = require("@slack/bolt");
 const { OpenAI } = require('openai');
-// const ngrok = require('ngrok');
+const ngrok = require('ngrok');
 
 // gets API Key from environment variable OPENAI_API_KEY
 const openai = new OpenAI();
@@ -36,6 +36,7 @@ async function handleMessage({ event, say, client }) {
     // Prevent infinite loops in DMs by only permitting new, human-written messages (which lack a subtype).
     if (event.subtype) return;
 
+    console.log("calling")
     const threads = await client.conversations.replies({
         channel: event.channel,
         ts: event.thread_ts ?? event.ts,
@@ -105,7 +106,7 @@ async function extractPrompts(slackMessages) {
 }
 
 async function main() {
-    await app.start(process.env.PORT || 3000);
+    await app.start(process.env.PORT ?? 8080);
     console.log("⚡️ Bolt app is running!");
 }
 
