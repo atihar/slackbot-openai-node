@@ -106,7 +106,7 @@ async function extractPrompts(slackMessages) {
 }
 
 async function main() {
-    await app.start(process.env.PORT ?? 3000);
+    await app.start(process.env.PORT ?? 8080);
     console.log("⚡️ Bolt app is running!");
 }
 
