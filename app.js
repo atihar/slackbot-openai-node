@@ -47,7 +47,7 @@ async function handleMessage({ event, say, client }) {
         text: "Thinking…",
     });
 
-    console.log(threads)
+    // console.log(threads)
     try {
         const prompts = await extractPrompts(threads.messages);
 
@@ -106,7 +106,7 @@ async function extractPrompts(slackMessages) {
 }
 
 async function main() {
-    await app.start(process.env.PORT ?? 8080);
+    await app.start(process.env.PORT ?? 3000);
     console.log("⚡️ Bolt app is running!");
 }
 
